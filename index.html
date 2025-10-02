@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiverr</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="nav_bar">
+    <a href="#"><img src="logo.png" alt="fiverr"></a>
+    <div class="nav_bar_left">
+      <select name="fiverr pro" id="pro">
+        <option value="fiverr">Fiverr Pro</option>
+      </select>
+      <select name="explore" id="explore">
+        <option value="Explore">Explore</option>
+      </select>
+      <select name="lang" id="lang">
+
+        <option value="ENG">🌐ENG</option>
+      </select>
+      <h4 id="seller">Become a Seller</h4>
+      <a href="#" id="sign">Sign in</a>
+      <button>JoIn</button>
+    </div>
+  </div>
+  <video autoplay muted loop class="video-background">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+
+
+  <div class="content">
+    <h1>Our freelancers <br>will take it from here</h1>
+    <div class="search">
+      <input class="ip" type="search" placeholder="Search for any services...">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </div>
+
+  <section class="categories">
+    <button class="transparent-btn">Website development &rarr;</button>
+    <button class="transparent-btn">architecture & interior design &rarr;</button>
+    <button class="transparent-btn">UGC videos &rarr;</button>
+    <button class="transparent-btn">video editing &rarr;</button>
+    <button class="transparent-btn">vibe coding</button>
+  </section>
+
+  <section class="trusted-section">
+   <p class="trusted-text">Trusted by:</p>
+   <div class="logos">
+    <img src="icons8-meta-16.png" alt="Meta">
+    <img src="icons8-google-64.png" alt="Google">
+    <img src="icons8-netflix-16.png" alt="Netflix">
+    <!-- style="height:60px;width:40px;" -->
+    <img src="icons8-paypal-16.png" alt="Paypal">
+  </div>
+ <button class="pause-btn">
+    &#10073;&#10073; 
+</button> 
+  </section>
+
+  <section class="types">
+  <div class="domains">
+    <div class="domain-box">        
+        <img src="programming-tech.svg" alt="tech-programming">
+        <p>Programming & Tech</p>
+    </div>
+    <div class="domain-box">
+        <img src="graphics-design-thin.ff38893.svg" alt="Graphic and design">
+        <p>Graphic & Design</p>
+    </div>
+    <div class="domain-box">
+      <img src="digital-marketing-thin.68edb44.svg" alt="digital marketing">
+      <p>Digital Marketing</p>
+    </div>
+    <div class="domain-box">
+      <img src="writing-translation-thin.fd3699b.svg" alt="writing & translation">
+      <p>Writing & Translation</p>
+    </div>
+    <div class="domain-box">
+      <img src="video-animation-thin.9d3f24d.svg" alt="video-animation">
+      <p>Video & Animation</p>
+    </div>
+    <div class="domain-box">
+      <img src="ai-services-thin.104f389.svg" alt="AI">
+      <p>AI Services</p>
+    </div>
+    <div class="domain-box">
+      <img src="music-audio-thin.43a9801.svg" alt="music and audio">
+      <p>Music & Audio</p>
+    </div>
+    <div class="domain-box">
+      <img src="business-thin.885e68e.svg" alt="business">
+      <p>Business</p>
+    </div>
+    <div class="domain-box">
+      <img src="consulting-thin.d5547ff.svg" alt="Consulting">
+      <p>Consulting</p>
+    </div>
+
+  </div>
+  </section>
+
+  <section class="services">
+    <h1>Popular Services</h1>
+    <div class="carousel">
+      <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
+      <div class="box-carousel">Vibe Coding
+        <img src="vibe_coding.webp" alt="vibe_coding">
+      </div>
+      <div class="box-carousel">Website Development
+        <img src="website-development.webp" alt="website-development">
+      </div>
+      <div class="box-carousel">Video Editing
+        <img src="video-editing.webp" alt="video-editing">
+      </div>
+      <div class="box-carousel">Software Development
+        <img src="software-development.webp" alt="software-development">
+      </div>
+      <div class="box-carousel">SEO
+        <img src="seo.webp" alt="SEO">
+      </div>
+      <div class="box-carousel">Architecture and <br>interior design
+        <img src="architecture-design.webp" alt="architecture-design">
+      </div>
+      <div class="box-carousel">Book Design
+        <img src="Book Design.webp" alt="Book">
+      </div>
+      <div class="box-carousel">UGC Videos
+        <img src="UGC Video img.webp" alt="UGC">
+      </div>
+      <div class="box-carousel">Voice Over
+        <img src="voice-over.webp" alt="voice-over">
+      </div>
+      <div class="box-carousel">Social Media <br>Marketing
+        <img src="social-media-marketing.webp" alt="social-media-marketing">
+      </div>
+      <div class="box-carousel">AI Development
+        <img src="AI Development.webp" alt="ai development">
+      </div>
+      <div class="box-carousel">Logo Design
+        <img src="logo-design.webp" alt="logo-design">
+      </div>
+      <div class="box-carousel">Website Design
+        <img src="Website Design.webp" alt="website design">
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+  </section>
+
+  <section class="stuck">
+    <div class="expert">
+      <h1>Stuck at vibe <br> coding?</h1>
+      <p>Get matched with the right expert to turn <br> your prototype into a real, working <br> product.</p>
+      <button>Find an expert</button>
+    </div>
+    <span class="banner"><img src="Vibe coding marketing banner loop.webp" alt="banner"></span>
+  </section>
+
+  <section class="fiverr-section">
+    <!-- Left side -->
+    <div class="text-content">
+      <h1>The <span>premium</span> freelance solution for businesses</h1>
+  
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">✔</div>
+          <div>
+            <h3>Dedicated hiring experts</h3>
+            <p>Count on an account manager to find you the right talent and see to your project’s every need.</p>
+          </div>
+        </div>
+  
+        <div class="feature">
+          <div class="feature-icon">✔</div>
+          <div>
+            <h3>Satisfaction guarantee</h3>
+            <p>Order confidently, with guaranteed refunds for less-than-satisfactory deliveries.</p>
+          </div>
+        </div>
+  
+        <div class="feature">
+          <div class="feature-icon">✔</div>
+          <div>
+            <h3>Advanced management tools</h3>
+            <p>Seamlessly integrate freelancers into your team and projects.</p>
+          </div>
+        </div>
+  
+        <div class="feature">
+          <div class="feature-icon">✔</div>
+          <div>
+            <h3>Flexible payment models</h3>
+            <p>Pay per project or opt for hourly rates to facilitate longer-term collaboration.</p>
+          </div>
+        </div>
+      </div>
+  
+      <button class="cta-btn">Try Now</button>
+    </div>
+  
+    <!-- Right side (Image) -->
+    <div class="image-content">
+      <img src="fiverr-pro_2x.webp" alt="Team working">
+    </div>
+  </section>
+
+  <section class="vision">
+    <h1>What success on Fiverr looks like</h1>
+    <p>Vontélle Eyewear turns to Fiverr freelancers to bring their vision to life.</p>
+    <video autoplay muted class="video">
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </section>
+
+  <section class="trusted-services">
+    <h2>Vontélle’s trusted services</h2>
+    <div class="service-boxes">
+      <div class="service-box">
+        <img src="3D-Industrial-Design_2x.webp" alt="3D Industrial Design">
+        <p>3D Industrial Design</p>
+      </div>
+      <div class="service-box">
+        <img src="E-commerce-Website-Development_2x.webp" alt="E-commerce Website Development">
+        <p>E-commerce Website Development</p>
+      </div>
+      <div class="service-box">
+        <img src="Email-Marketing_2x.webp" alt="Email Marketing">
+        <p>Email Marketing</p>
+      </div>
+      <div class="service-box">
+        <img src="Press-Releases_2x.webp" alt="Press Releases">
+        <p>Press Releases</p>
+      </div>
+      <div class="service-box">
+        <img src="Logo-Design_2x.webp" alt="Logo Design">
+        <p>Logo Design</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Make it all happen with freelancers</h2><br>
+  <div class="features-list">
+    <div class="feature-box">
+      <img src="categories.8badf97.svg" alt="Access Talent">  
+      <p>Access a pool of top talent across 700 categories</p>
+    </div>
+    
+    <div class="feature-box">
+      <img src="matching.0eef7cc.svg" alt="Matching">
+      <div class=" write">
+        <p>Access a pool of top talent across 700 categories</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <img src="quickly.6879514.svg" alt="Quick Delivery">
+      <div class=" write">
+        <p>Access a pool of top talent across 700 categories</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <img src="happy.42ed7bd.svg" alt="Pay When Happy">
+      <div class=" write">
+        <p>Access a pool of top talent across 700 categories</p>
+      </div>
+    </div>
+  </div>
+
+  </section>
+    
+  <!-- Logo Maker Section -->
+  <section class="logo-maker">
+    <div class="logo-maker-text">
+      <h3>Make an incredible logo <span style="color: orange;">in seconds</span></h3>
+      <p>Pre-designed by top talent. Just add your touch.</p>
+      <button class="logo-btn">Try Fiverr Logo Maker</button>
+    </div>
+    <img src="logo-maker-lohp.webp" alt="Logo Maker Preview">
+  </section>
+  
+  <section class="guides-section">
+    <div class="guides-header">
+      <h2>Guides to help you grow</h2>
+      <a href="#">See more</a>
+    </div>
+  
+    <div class="guides-grid">
+      <div class="guide-card">
+        <img src="side hustle.webp" alt="Start a side business">
+        <p class="guide-title">Start a side business</p>
+      </div>
+      <div class="guide-card">
+        <img src="1685561103924-12profitableecommercebusinessideasyoucanstarttoday.webp" alt="Ecommerce business ideas">
+        <p class="guide-title">Ecommerce business ideas</p>
+      </div>
+      <div class="guide-card">
+        <img src="home based online business-fiverr.webp" alt="Start an online business">
+        <p class="guide-title">Start an online business and work from home</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Banner Section -->
+  <section class="banner">
+    <h2>Freelance services at your <span>fingertips</span></h2>
+    <button>Join Fiverr</button>
+  </section>
+
+</body>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Column 1 -->
+    <div class="footer-column">
+      <h4>Categories</h4><br>
+      <a href="#">Graphics & Design</a><br>
+      <a href="#">Digital Marketing</a><br>
+      <a href="#">Writing & Translation</a><br>
+      <a href="#">Video & Animation</a><br>
+      <a href="#">Music & Audio</a><br>
+      <a href="#">Programming & Tech</a><br>
+      <a href="#">AI Services</a><br>
+      <a href="#">Consulting</a><br>
+      <a href="#">Data</a><br>
+      <a href="#">Business</a><br>
+      <a href="#">Personal Growth & Hobbies</a><br>
+      <a href="#">Photography</a><br>
+      <a href="#">Finance</a><br>
+      <a href="#">End-to-End Projects</a><br>
+      <a href="#">Service Catalog</a><br>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-column">
+      <h4>For Clients</h4><br>
+      <a href="#">How Fiverr Works</a><br>
+      <a href="#">Customer Success Stories</a><br>
+      <a href="#">Trust & Safety</a><br>
+      <a href="#">Quality Guide</a><br>
+      <a href="#">Fiverr Guides</a><br>
+      <a href="#">Fiverr Answers</a><br>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-column">
+      <h4>For Freelancers</h4><br>
+      <a href="#">Become a Fiverr Freelancer</a><br>
+      <a href="#">Become an Agency</a><br>
+      <a href="#">Freelancer Equity Program</a><br>
+      <a href="#">Community Hub</a><br>
+      <a href="#">Forum</a><br>
+      <a href="#">Events</a><br>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-column">
+      <h4>Business Solutions</h4><br>
+      <a href="#">Fiverr Pro</a><br>
+      <a href="#">Project Management Service</a><br>
+      <a href="#">Expert Sourcing Service</a><br>
+      <a href="#">ClearVoice – Content Marketing</a><br>
+      <a href="#">Working Not Working – Creative Talent</a><br>
+      <a href="#">AutoDS – Dropshipping Tool</a><br>
+      <a href="#">AI store builder</a><br>
+      <a href="#">Fiverr Logo Maker</a><br>
+      <a href="#">Contact Sales</a><br>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="footer-column">
+      <h4>Company</h4><br>
+      <a href="#">About Fiverr</a><br>
+      <a href="#">Help & Support</a><br>
+      <a href="#">Social Impact</a><br>
+      <a href="#">Careers</a><br>
+      <a href="#">Terms of Service</a><br>
+      <a href="#">Privacy Policy</a><br>
+      <a href="#">Do not sell or share my personal <br>information</a><br>
+      <a href="#">Partnerships</a><br>
+      <a href="#">Creator Network</a><br>
+      <a href="#">Affiliates</a><br>
+      <a href="#">Invite a Friend</a><br>
+      <a href="#">Press & News</a><br>
+      <a href="#">Investor Relations</a><br>
+    </div>
+  </div>
+  <br>
+  <hr>
+
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <div class="footer-left">
+      <img src="logo.png" alt="Fiverr Logo">
+      <p id="copyright"> &copy Fiverr International Ltd. 2025</p>
+    </div>
+
+    <div class="footer-icons">
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-solid fa-globe"></i></a>
+      <a href="#">English</a>
+      <a href="#">₹ INR</a>
+    </div>
+  </div>
+</footer>
+
+</html>
