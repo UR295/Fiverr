@@ -429,6 +429,20 @@ body{
   color:#334155;
 }
 
+/* Make whole card clickable when wrapped in a link */
+.card-link { text-decoration: none; color: inherit; display: inline-block; }
+.card-link .card { transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.card-link:hover .card { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+
+/* Modal styles for Post Project */
+.modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); z-index: 40; }
+.modal[aria-hidden="false"], .modal.show { display:flex }
+.modal-content { background:#fff; padding:18px; border-radius:10px; width:420px; max-width:92%; box-shadow:0 10px 30px rgba(0,0,0,0.2) }
+.modal-content h3 { margin-top:0 }
+.modal-content label { display:block; margin:8px 0 }
+.modal-content input[type="text"], .modal-content input[type="number"], .modal-content textarea, .modal-content select { width:100%; padding:8px; border:1px solid #e5e7eb; border-radius:6px }
+.modal-close { position:absolute; right:18px; top:12px; background:transparent; border:0; font-size:20px; cursor:pointer }
+
 /* looking for section */
 .looking-for h2{
   margin:0 0 12px 0;

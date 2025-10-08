@@ -11,6 +11,8 @@
 </head>
 <body>
 
+  <!-- auth removed: public marketplace -->
+
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo"><span>Fiver</span></div>
@@ -64,11 +66,11 @@
         <div class="card-left">
           <div class="icon circle">📄</div>
         </div>
-        <div class="card-right">
+        <a href="../post-project.html" class="card-right card-link" id="openPostProject">
           <p class="muted">RECOMMENDED FOR YOU</p>
           <h3>Post a project brief</h3>
           <p class="sub">Get tailored offers for your needs.</p>
-        </div>
+        </a>
       </article>
 
       <article class="card small">
@@ -82,6 +84,7 @@
         </div>
       </article>
 
+      <a href="../EAdmin/Profile.html" class="card-link" aria-label="Open profile progress">
       <article class="card small">
         <div class="card-left">
           <div class="icon circle">🎒</div>
@@ -92,6 +95,7 @@
           <p class="sub">Complete it to get tailored suggestions.</p>
         </div>
       </article>
+      </a>
     </section>
 
     <section class="looking-for">
@@ -295,7 +299,45 @@
       <p>© 2025 GigMarket. All rights reserved.</p>
     </div>
   </footer>
- <script src="page.js"></script>
+
+  <!-- Post Project Modal -->
+  <div id="postModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" data-dismiss>&times;</button>
+      <h3>Post a Project</h3>
+      <form id="postForm">
+        <label>Category
+          <select id="projCategory">
+            <option value="website">Website</option>
+            <option value="video">Video Editor</option>
+            <option value="graphic">Graphic Designer</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>Title
+          <input id="projTitle" required />
+        </label>
+        <label>Description
+          <textarea id="projDesc" rows="4" required></textarea>
+        </label>
+        <label>Upload Image
+          <input id="projImage" type="file" accept="image/*">
+        </label>
+        <label>Price ($)
+          <input id="projPrice" type="number" required>
+        </label>
+        <label>Domain (optional)
+          <input id="projDomain" placeholder="example.com">
+        </label>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button type="submit" class="btn">Post project</button>
+          <button type="button" class="btn" data-dismiss>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="page.js"></script>
+  
 
 </body>
 </html>

@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  color: #333;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #1dbf73;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.nav-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.profile-icon {
+  background: #ff7f00;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 50px;
+  gap: 40px;
+}
+
+/* Left Profile Card */
+.profile-card {
+  flex: 1;
+  max-width: 280px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.profile-circle {
+  width: 80px;
+  height: 80px;
+  background: #ff7f00;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.username {
+  color: #777;
+}
+
+.profile-card hr {
+  margin: 15px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.muted {
+  color: #bbb;
+}
+
+/* Right Side */
+.profile-details {
+  flex: 2;
+  max-width: 700px;
+}
+
+.banner {
+  background: #f8f9ff;
+  border: 1px solid #dce0ff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.banner p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.banner a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.banner button {
+  background: transparent;
+  border: none;
+  color: #0073e6;
+  cursor: pointer;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Progress Card */
+.progress-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 100%;
+  width: 35%;
+  background: #1dbf73;
+  border-radius: 5px;
+  transition: width 0.5s;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+.checklist-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+.checklist-item label {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 24px;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.reviewer { font-weight: 600; }
+.rating { color: #f59e0b; font-weight: 700; }
+.review-meta { font-size: 12px; color: #888; margin-top: 8px; }
+
+@media (max-width: 900px) {
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .profile-container { flex-direction: column; padding: 16px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+
+/* Footer */
+.site-footer {
+  background: #f8fafc;
+  border-top: 1px solid #eee;
+  padding: 20px 30px;
+  margin-top: 30px;
+  text-align: center;
+  color: #555;
+}
+.site-footer .footer-links a { margin: 0 8px; color: #555; text-decoration: none; }
+
+/* Projects */
+.projects-section { margin-top: 20px; }
+.projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 10px; }
+.project-card { border:1px solid #eee; border-radius:8px; overflow:hidden; background:#fff; display:flex; flex-direction:column; }
+.project-card img{ width:100%; height:120px; object-fit:cover; display:block }
+.proj-info{ padding:10px }
+.proj-info h4{ margin:0 0 6px }
+.proj-info .meta{ font-size:12px; color:#888; margin-top:8px }
+
+
+/* Compact variants for left profile card */
+.projects-grid.compact { display:flex; flex-direction:column; gap:8px }
+.project-card.compact { flex-direction:row; align-items:center; gap:8px }
+.project-card.compact img{ width:60px; height:60px; object-fit:cover }
+.proj-info.compact { padding:6px }
+/* Clients removed */
+
+@media (max-width:900px){ .projects-grid{ grid-template-columns: repeat(2,1fr) } }
+@media (max-width:600px){ .projects-grid{ grid-template-columns: 1fr } .clients-list{ justify-content:flex-start } }

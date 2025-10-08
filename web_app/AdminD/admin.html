@@ -8,14 +8,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-  <div class="brand">
-    <div class="logo">Fiver</div>
-    <h1>Seller Dashboard</h1>
-  </div>
-  <a id="homeBtn" href="../sinpage/Spage.html" class="btn home">Home</a>
-  <a id="logoutBtn" href="../index.html" class="btn logout">Logout</a>
-</header>
+  <header class="header navbar">
+    <div class="brand">
+      <div class="logo">Fiver</div>
+      <h1 class="dash-title">Seller Dashboard</h1>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search gigs, orders, or messages..." />
+      <button>🔍</button>
+    </div>
+
+    <nav class="nav-links">
+      <a href="../sinpage/Spage.html">Market</a>
+      <a href="#">Orders</a>
+      <a href="#">Messages</a>
+    </nav>
+
+    <div class="nav-icons">
+      <a id="homeBtn" href="../sinpage/Spage.html" class="btn home">Home</a>
+      <a id="logoutBtn" href="../index.html" class="btn logout">Logout</a>
+    </div>
+  </header>
 
 
   <main class="main">

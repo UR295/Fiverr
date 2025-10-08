@@ -30,6 +30,15 @@ body {
   z-index: 10;
 }
 
+/* Navbar enhancements */
+.header.navbar { gap: 16px; }
+.header .search-bar { display:flex; align-items:center; gap:8px; width:360px; }
+.header .search-bar input{ padding:8px 10px; border-radius:8px; border:1px solid #e5e7eb; width:100%; }
+.header .search-bar button{ padding:8px 10px; background:var(--green); color:#fff; border:none; border-radius:8px; cursor:pointer }
+.nav-links { display:flex; gap:12px; align-items:center; margin-left:8px }
+.nav-links a{ text-decoration:none; color:var(--dark); font-weight:600 }
+.nav-icons { display:flex; gap:8px; align-items:center }
+
 .brand {
   display: flex;
   align-items: center;
