@@ -1,0 +1,358 @@
+:root {
+  --green: #1dbf73;
+  --dark: #0f1720;
+  --muted: #6b7280;
+  --bg: #f5f7fa;
+  --white: #ffffff;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Navbar enhancements */
+.header.navbar { gap: 16px; }
+.header .search-bar { display:flex; align-items:center; gap:8px; width:360px; }
+.header .search-bar input{ padding:8px 10px; border-radius:8px; border:1px solid #e5e7eb; width:100%; }
+.header .search-bar button{ padding:8px 10px; background:var(--green); color:#fff; border:none; border-radius:8px; cursor:pointer }
+.nav-links { display:flex; gap:12px; align-items:center; margin-left:8px }
+.nav-links a{ text-decoration:none; color:var(--dark); font-weight:600 }
+.nav-icons { display:flex; gap:8px; align-items:center }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  background: linear-gradient(135deg, var(--green), #13a866);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.btn {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #17a665;
+}
+
+.logout {
+  text-decoration: none;
+  background: #e53e3e;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.logout:hover {
+  background: #c53030;
+}
+
+
+.logout:hover {
+  background: #e04b4b;
+}
+
+/* Layout */
+.main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #1dbf73, #0f9960);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: var(--shadow);
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profile-box h4 {
+  margin: 0;
+}
+
+.profile-box p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #e4f9ed;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+.section {
+  display: none;
+  animation: fade 0.3s ease;
+}
+
+.section.visible {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Cards & Forms */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.form-card {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card button {
+  margin-top: 8px;
+  background: #ef4444;
+}
+
+.card button:hover {
+  background: #dc2626;
+}
+
+/* Payment Box */
+.payment-box p {
+  margin: 6px 0;
+}
+
+.withdraw {
+  margin-top: 10px;
+  background: var(--green);
+}
+
+/* Chart */
+.chart-card {
+  padding: 10px;
+}
+
+/* ---------- Analytics Styling ---------- */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  padding: 18px;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+.gradient-blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+.gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+.gradient-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.stat-card h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+.stat-card p {
+  margin: 6px 0 0 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.chart-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.chart-card {
+  padding: 16px;
+}
+.chart-card h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+/* Filter Bar Container */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Select Dropdowns */
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.filter-bar select:hover,
+.filter-bar select:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 5px rgba(0,115,230,0.3);
+  outline: none;
+}
+
+/* Toggle Switch Container */
+.filter-bar .toggles {
+  display: flex;
+  gap: 15px;
+}
+
+/* Toggle Labels */
+.filter-bar .toggles label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+.filter-bar .toggles input[type="checkbox"] {
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

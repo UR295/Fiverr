@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiverr Profile - Demo</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">fiverr<span>.</span></div>
+    <input type="text" placeholder="What service are you looking for today?" class="search-bar" />
+    <nav class="nav-links">
+      <a href="#">Trending 🔥</a>
+      <a href="#">Graphics & Design</a>
+      <a href="#">Programming & Tech</a>
+      <a href="#">Digital Marketing</a>
+    </nav>
+    <div class="profile-icon">A</div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="profile-container">
+    <!-- Left Card -->
+    <aside class="profile-card">
+      <div class="profile-circle">A</div>
+      <h2>Your Fiverr Name</h2>
+      <p class="username">@fiverrusername</p>
+      <hr />
+      <p>📍 Located in India</p>
+      <p>👤 Joined in October 2025</p>
+      <p class="muted">🌐 Preferred languages</p>
+      <p class="muted">🕓 Preferred working hours</p>
+      
+      <!-- Previous Projects (moved into left card) -->
+      <div class="projects-section small" style="margin-top:14px">
+        <h4>Previous projects</h4>
+        <div id="previousProjects" class="projects-grid compact">
+          <!-- rendered by profile-data.js -->
+        </div>
+      </div>
+
+      <!-- Previous Clients removed -->
+    </aside>
+
+    <!-- Right Content -->
+    <section class="profile-details">
+      <div class="banner">
+        <p>📢 This is your profile when ordering services.
+          <a href="#">Click here</a> for your freelancer profile.</p>
+        <button id="dismiss-btn">Dismiss</button>
+      </div>
+
+      <h2>Hi 👋 Let's help freelancers get to know you</h2>
+      <p class="subtitle">
+        Get the most out of Fiverr by sharing a bit more about yourself and how you prefer to work with freelancers.
+      </p>
+
+      <div class="progress-card">
+        <h3>Profile checklist</h3>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+        <p id="progressText">35% Complete</p>
+
+        <ul class="checklist" id="checklist">
+          <li class="checklist-item"><label><input type="checkbox" checked> Add profile photo</label></li>
+          <li class="checklist-item"><label><input type="checkbox"> Write a short bio</label></li>
+          <li class="checklist-item"><label><input type="checkbox"> Add your skills</label></li>
+          <li class="checklist-item"><label><input type="checkbox"> Add work samples/portfolio</label></li>
+          <li class="checklist-item"><label><input type="checkbox"> Set your hourly rate or packages</label></li>
+          <li class="checklist-item"><label><input type="checkbox"> Connect a payment method</label></li>
+        </ul>
+      </div>
+
+      <!-- ...existing right-column content... -->
+
+      <!-- Reviews / Feedback -->
+      <div class="reviews-section">
+        <h3>Freelancer reviews</h3>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer">Alex J</div>
+              <div class="rating">⭐ 5.0</div>
+            </div>
+            <p>Great work — delivered ahead of schedule and exceeded expectations. Communication was excellent.</p>
+            <div class="review-meta">Website redesign · 2 weeks ago</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer">Priya S</div>
+              <div class="rating">⭐ 4.8</div>
+            </div>
+            <p>Delivered a polished landing page. Minor changes were handled quickly.</p>
+            <div class="review-meta">Landing page · 3 weeks ago</div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer">Michael R</div>
+              <div class="rating">⭐ 4.9</div>
+            </div>
+            <p>Very professional. The final files were clean and well-documented.</p>
+            <div class="review-meta">Logo design · 1 month ago</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="profile-data.js"></script>
+  <script src="profile.js"></script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#">About</a> ·
+        <a href="#">Careers</a> ·
+        <a href="#">Help & Support</a> ·
+        <a href="#">Terms</a>
+      </div>
+      <p style="margin-top:8px">© 2025 Fiver. Built with ❤️</p>
+    </div>
+  </footer>
+</body>
+</html>

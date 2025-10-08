@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post Project - GigMarket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Inter,Arial;margin:0;background:#f7fafc}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:#fff;border-bottom:1px solid #eef2f6}
+    .navbar .brand{display:flex;align-items:center;gap:12px}
+  .navbar .brand img{height:56px;width:120px;object-fit:contain}
+    .nav-actions{display:flex;gap:8px}
+    .nav-actions a{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    .nav-actions a.logout{background:#e53e3e}
+    .container{max-width:760px;margin:32px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+    label{display:block;margin:10px 0}
+    input,select,textarea{width:100%;padding:10px;border:1px solid #e6eaf0;border-radius:8px}
+    .row{display:flex;gap:12px}
+    .row > *{flex:1}
+    button{background:#1dbf73;color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+    .muted{color:#666;font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="Fiverr logo">
+      
+    </div>
+    <div class="nav-actions">
+      <a href="./sinpage/Spage.html" id="homeBtn">Home</a>
+      <a href="./index.html" id="logoutBtn" class="logout" onclick="localStorage.clear(); sessionStorage.clear();">Logout</a>
+    </div>
+  </header>
+  <div class="container">
+    <h2>Post a project</h2>
+    <p class="muted">Fill details below to publish your project.</p>
+    <form id="fullPostForm">
+      <label>Category<select id="cat"><option value="website">Website</option><option value="video">Video Editor</option><option value="graphic">Graphic Designer</option><option value="other">Other</option></select></label>
+      <label>Title<input id="title" required></label>
+      <label>Description<textarea id="desc" rows="6" required></textarea></label>
+      <div class="row">
+        <label>Price ($)<input id="price" type="number" required></label>
+        <label>Domain (optional)<input id="domain"></label>
+      </div>
+      <label>Image<input id="image" type="file" accept="image/*"></label>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button type="submit">Publish project</button>
+        <button type="button" id="saveDraft">Save draft</button>
+        <button type="button" id="cancel">Cancel</button>
+      </div>
+      <div id="msg" style="color:#d00;margin-top:8px"></div>
+    </form>
+  </div>
+
+<script>
+// Prefill draft if exists
+const DRAFT_KEY = 'gm_post_draft_v1';
+function loadDraft(){ try{ return JSON.parse(localStorage.getItem(DRAFT_KEY)||'null'); }catch(e){return null;} }
+function saveDraft(d){ localStorage.setItem(DRAFT_KEY, JSON.stringify(d)); }
+function clearDraft(){ localStorage.removeItem(DRAFT_KEY); }
+
+const draft = loadDraft();
+if(draft){ document.getElementById('cat').value = draft.category||''; document.getElementById('title').value = draft.title||''; document.getElementById('desc').value = draft.desc||''; document.getElementById('price').value = draft.price||''; document.getElementById('domain').value = draft.domain||''; }
+
+async function toDataUrl(file){ return new Promise((res,rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); }); }
+
+function loadGigs(){ try{ return JSON.parse(localStorage.getItem('gm_gigs')||'[]'); }catch(e){ return []; } }
+function saveGigs(list){ localStorage.setItem('gm_gigs', JSON.stringify(list)); }
+
+const form = document.getElementById('fullPostForm');
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const category = document.getElementById('cat').value;
+  const title = document.getElementById('title').value.trim();
+  const desc = document.getElementById('desc').value.trim();
+  const price = Number(document.getElementById('price').value);
+  const domain = document.getElementById('domain').value.trim();
+  const imageEl = document.getElementById('image');
+  if(!title||!desc||!price){ document.getElementById('msg').textContent='Please fill required fields'; return; }
+  let img = 'logo.png';
+  if(imageEl.files && imageEl.files[0]){ img = await toDataUrl(imageEl.files[0]); }
+  // auth removed: use anonymous poster
+  const poster = 'anonymous';
+  const gig = { category, title, desc, price, domain, image: img, created: Date.now(), poster };
+  const gigs = loadGigs(); gigs.unshift(gig); saveGigs(gigs);
+  clearDraft();
+  window.location.href = './sinpage/Spage.html';
+});
+
+// Save draft
+document.getElementById('saveDraft').addEventListener('click', ()=>{
+  const draftObj = { category:document.getElementById('cat').value, title:document.getElementById('title').value, desc:document.getElementById('desc').value, price:document.getElementById('price').value, domain:document.getElementById('domain').value };
+  saveDraft(draftObj);
+  alert('Draft saved');
+});
+
+// Cancel
+document.getElementById('cancel').addEventListener('click', ()=>{ window.location.href = './sinpage/Spage.html'; });
+</script>
+</body>
+</html>
