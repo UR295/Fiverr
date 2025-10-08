@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigMarket - Website Development</title>
+  <link rel="stylesheet" href="Spage.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><span>Fiver</span></div>
+    <div class="search-bar">
+      <input type="text" placeholder="What service are you looking for today?" />
+      <button>🔍</button>
+    </div>
+    <div class="nav-icons">
+      <a href="#">💬</a>
+      <a href="#">❤️</a>
+      <a href="#">🔔</a>
+      <a href="#">Orders</a>
+  
+     <a href="../index.html" class="profile" id="logoutLink" onclick="localStorage.clear(); sessionStorage.clear();">logOut</a>
+     
+     <div class="profile-admin">
+       
+       <a href="#" class="nav-avatar" id="navAvatar" aria-label="Profile">
+         <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" />
+       </a>
+       <a href="../AdminD/admin.html" class="profile" id="adminBtn">Admin</a>
+     </div>
+    </div>
+  </header>
+
+  <!-- Category Navigation -->
+  <nav class="category-nav">
+    <a href="#">Trending 🔥</a>
+    <a href="#">Graphics & Design</a>
+    <a href="#" class="active">Programming & Tech</a>
+    <a href="#">Digital Marketing</a>
+    <a href="#">Video & Animation</a>
+    <a href="#">Writing & Translation</a>
+    <a href="#">Music & Audio</a>
+    <a href="#">Business</a>
+    <a href="#">Finance</a>
+    <a href="#">AI</a>
+  </nav>
+
+  <main class="container">
+    <header class="top-row">
+      <h1 class="welcome">Welcome back, <span class="name"></span></h1>
+      <nav class="nav-right">
+        <button class="icon-btn" aria-label="prev">&lt;</button>
+        <button class="icon-btn" aria-label="next">&gt;</button>
+      </nav>
+    </header>
+
+    <section class="cards-row">
+      <article class="card small">
+        <div class="card-left">
+          <div class="icon circle">📄</div>
+        </div>
+        <div class="card-right">
+          <p class="muted">RECOMMENDED FOR YOU</p>
+          <h3>Post a project brief</h3>
+          <p class="sub">Get tailored offers for your needs.</p>
+        </div>
+      </article>
+
+      <article class="card small">
+        <div class="card-left">
+          <div class="icon circle">⬇️</div>
+        </div>
+        <div class="card-right">
+          <p class="muted">RECOMMENDED FOR YOU</p>
+          <h3>Download the Fiverr app</h3>
+          <p class="sub">Stay productive, anywhere you go.</p>
+        </div>
+      </article>
+
+      <article class="card small">
+        <div class="card-left">
+          <div class="icon circle">🎒</div>
+        </div>
+        <div class="card-right">
+          <p class="muted">PROFILE PROGRESS</p>
+          <h3>You've added <strong>35%</strong> of your profile</h3>
+          <p class="sub">Complete it to get tailored suggestions.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="looking-for">
+      <h2>Based on what you might be looking for</h2>
+      <div class="carousel">
+        <div class="tile">Design</div>
+        <div class="tile">Web Development</div>
+        <div class="tile">Marketing</div>
+        <div class="tile">Video</div>
+        <div class="tile">Writing</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section Title -->
+  <section class="category-header">
+    <p>Programming & Tech</p>
+    <h1>Website Development</h1>
+    <p>Create, build, and develop your website with skilled website developers.</p>
+  </section>
+
+  <!-- Subcategory Cards -->
+  <section class="subcategory-wrapper">
+  <button class="scroll-btn left">‹</button>
+
+  <section class="subcategory-section" id="subcategorySection">
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/174/174881.png"><p>WordPress</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"><p>Custom Websites</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968918.png"><p>Shopify</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968773.png"><p>Wix</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"><p>Webflow</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968708.png"><p>Squarespace</p></div>
+
+
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png"><p>Weebly</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968909.png"><p>Joomla</p></div>
+    <div class="subcategory-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968975.png"><p>Drupal</p></div>
+  
+
+  
+</section>
+
+
+
+
+  <!-- Filter Bar -->
+  <section class="filter-bar">
+    <select><option>Service Options</option></select>
+    <select><option>Seller Details</option></select>
+    <select><option>Budget</option></select>
+    <select><option>Delivery Time</option></select>
+
+    <div class="toggles">
+      <label><input type="checkbox"> Pro Services</label>
+      <label><input type="checkbox"> Instant Response</label>
+    </div>
+  </section>
+
+  <!-- Gig Results -->
+  <section class="gigs-section">
+    <h3>210,000+ results</h3>
+    <div class="gigs-grid">
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s5.png" alt="Gig Preview 1" />
+        <h4>I will build a professional portfolio website</h4>
+        <p>⭐ 4.9 (230)</p>
+        <p class="price">From $80</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s4.png" alt="Gig Preview 2" />
+        <h4>I will create a WordPress e-commerce store</h4>
+        <p>⭐ 4.8 (180)</p>
+        <p class="price">From $100</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s3.png" alt="Gig Preview 3" />
+        <h4>I will design a custom Shopify theme</h4>
+        <p>⭐ 5.0 (140)</p>
+        <p class="price">From $120</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s8.png" alt="Gig Preview 4" />
+        <h4>I will develop a responsive landing page</h4>
+        <p>⭐ 4.7 (95)</p>
+        <p class="price">From $60</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s5.png" alt="Gig Preview 5" />
+        <h4>I will implement Shopify for your website</h4>
+        <p>⭐ 4.6 (120)</p>
+        <p class="price">From $50</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s9.png" alt="Gig Preview 6" />
+        <h4>I develop a website</h4>
+        <p>⭐ 4.8 (67)</p>
+        <p class="price">From $90</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s10.png" alt="Gig Preview 7" />
+        <h4>I redesign a website</h4>
+        <p>⭐ 4.9 (210)</p>
+        <p class="price">From $300</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s11.png" alt="Gig Preview 8" />
+        <h4>I will design a full stack device</h4>
+        <p>⭐ 4.7 (48)</p>
+        <p class="price">From $140</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s13.png" alt="Gig Preview 9" />
+        <h4>I will wordPress website performance</h4>
+        <p>⭐ 4.8 (132)</p>
+        <p class="price">From $75</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s14.png" alt="Gig Preview 10" />
+        <h4>I will Webframe flow design to a website</h4>
+        <p>⭐ 5.0 (88)</p>
+        <p class="price">From $110</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s15.png" alt="Gig Preview 11" />
+        <h4>I will design a full stack website</h4>
+        <p>⭐ 4.5 (41)</p>
+        <p class="price">From $40</p>
+      </div>
+
+      <div class="gig-card">
+        <img src="../sinpage/Assests/s16.png" alt="Gig Preview 12" />
+        <h4>I will provide website wordpress</h4>
+        <p>⭐ 4.6 (73)</p>
+        <p class="price">From $30</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Graphics & Design</a></li>
+          <li><a href="#">Programming & Tech</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Writing & Translation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">About GigMarket</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press & News</a></li>
+          <li><a href="#">Partnerships</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help & Support</a></li>
+          <li><a href="#">Trust & Safety</a></li>
+          <li><a href="#">Selling on GigMarket</a></li>
+          <li><a href="#">Buying on GigMarket</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Invite Friends</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+      </div>
+      <p>© 2025 GigMarket. All rights reserved.</p>
+    </div>
+  </footer>
+ <script src="page.js"></script>
+
+</body>
+</html>
